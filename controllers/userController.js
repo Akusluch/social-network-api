@@ -65,7 +65,6 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-
   // Add a friend to a user
   async addFriend(req, res) {
     try {
