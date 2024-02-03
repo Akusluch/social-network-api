@@ -9,17 +9,17 @@ const {
   removeFriend,
 } = require('../../controllers/userController');
 
-// /api/user
+// /api/users
 router.route('/').get(getUser).post(createUser);
 
-// /api/user/:userId
+// /api/users/:userId
 router.route('/:userId')
 .get(getSingleUser)
 .update(updateUser)
 .delete(deleteUser);
 
-// /api/students/:studentId/assignments/:assignmentId
-router.route('/:userId/friends/:friendsId')
+// /api/users/:userId/friends/:friendId
+router.route('/:userId/friends/:friendId')
 .post(addFriend)
 .delete(removeFriend);
 
